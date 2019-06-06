@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="På ninnayork.com kan du finde unikke og ægte smykker håndlavet af den danske smykkedesigner Ninna York. Du kan desuden få lavet et custom jewellery, bl.a. af materiale fra dine gamle smykker. Ninna Yorks værksted og showroom er lokaliseret i København. Shop dit sølv og guld i god kvalitet og ej noget der er tidsvarende i både design og holdbarhed. Create Your Attitude.">
+    <meta name="keywords" content="Smykkedesigner, Sølv, Guld, Ninna York, Dansk Designer, Dansk Smykkedesigner, Smykker, Øreringe, Ring, Halskæde, Armbånd, Smykker Til Kvinder, Smykker Online, Diamantring, Perler, Ringe Online, Forlovelsesringe, Danmark, København, Jewellery, Create Your Attitude">
+    <title>Ninna York Forside</title>
+    <link rel="icon" href="billeder/favicon.png" type="image/png" sizes="16x16">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        /*FONTS*/
+        @font-face{
+            font-family: 'raleway';
+            src: url('fonts/raleway-webfont.woff2') format('woff2'),
+                url('fonts/raleway-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face{
+            font-family: 'spinnaker';
+            src: url('fonts/spinnaker-webfont.woff2') format('woff2'),
+                url('fonts/spinnaker-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*FONTS SLUT*/
+
+        /*BACKGROUND*/
+
+        #backgroundpic img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -999;
+        }
+
+        .video video{
+            display: none;
+        }
+
+        /*BACKGROUND END*/
+
+        /*MENU*/
+        .mainmenu .navmenu {
+            position: fixed;
+            right: 5vw;
+            top: 12vw;
+            text-align: right;
+        }
+
+        .mainmenu .navmenu a {
+            text-decoration: none;
+            color: black;
+            line-height: 50px;
+            font-family: 'spinnaker';
+            background-color: white;
+            padding: 0.2vw 1vw;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #fixednav {
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        .burgermenu {
+            margin-right: 30px;
+            margin-top: 17px;
+            z-index: 100;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 55px;
+            height: 6px;
+            background-image: linear-gradient(-90deg, goldenrod, gold);
+            border-radius: 10vw;
+            margin: 9px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            transform: rotate(-45deg) translate(-13px, 9px);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            transform: rotate(45deg) translate(-10px, -9px);
+        }
+
+
+        /*MENU END*/
+
+        /*FEEDGRID MOBILE FIRST*/
+        .feedcontainer {
+            column-count: 2;
+            padding: 115vw 5vw 0;
+            /*            column-gap: 0;*/
+            /*der er en automatisk gap på. Hvis man fjerner udkommenteringen på denne, vil der ikke være gaps.*/
+        }
+
+        .feedcontainer img {
+            width: 100%;
+            padding-bottom: 1.5vh;
+        }
+
+        #bigjewl img {
+                width: 35%;
+            position: absolute;
+                top: 80px;
+                left: 30px;
+             z-index: 10;
+            }
+
+            #logo img {
+                width: 50%;
+                position: absolute;
+                top: 30px;
+                left: 5%;
+                 z-index: 10;
+            }
+
+
+        /*FEEDGRID MOBILE FIRST END*/
+
+        /*MEDIA QUERIES*/
+        /*burgermenu*/
+        @media (max-width: 770px) {
+            .hidden {
+                display: none;
+            }
+
+            .burgermenu {
+                position: absolute;
+                right: 2%;
+            }
+
+            .mainmenu .navmenu {
+                background-color: rgba(255, 255, 255, 0.9);
+                top: 10%;
+                position: absolute;
+                right: 10%;
+                font-size: 1.5rem;
+                padding-top: 10vw;
+                padding-right: 30px;
+                text-align: center;
+                border-radius: 5%;
+            }
+
+            .mainmenu .navmenu a{
+                text-shadow: none;
+                background: none;
+                border-radius: 0;
+                border: none;
+                padding: 0;
+            }
+
+        }
+
+        /*større mobil*/
+        @media (min-width: 700px){
+            .feedcontainer{
+                column-count: 3;
+                padding: 52% 15vw 0;
+            }
+             #bigjewl img {
+            width: 14.5%;
+            top: 11vw;
+            left: 27vw;
+        }
+            #logo img {
+            width: 32%;
+            top: 4vw;
+            left: 34vw;
+        }
+            .video video{
+            display: block;
+            width: 55.6vw;
+            border-radius: 100%;
+            position: absolute;
+            left: 22.23vw;
+            top: -8.8vw;
+                z-index: -4;
+        }
+        }
+
+        /*tablet*/
+        @media (min-width: 771px) {
+            .burgermenu {
+                display: none;
+            }
+        }
+
+        /*desktop*/
+        @media (min-width: 900px){
+            .feedcontainer {
+                column-count: 4;
+            /*            column-gap: 0;*/
+            /*der er en automatisk gap på. Hvis man fjerner udkommenteringen på denne, vil der ikke være gaps.*/
+        }
+
+        }
+
+        /*MEDIA QUERIES END*/
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="fixednav">
+            <div class="mainmenu">
+                <div class="burgermenu">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+                <div class="navmenu hidden">
+                    <nav>
+                        <ul>
+                            <li><a href="custom.html">Custom</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="showpieces.html">Showpieces</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="backgroundpic">
+        <picture>
+            <source media="(min-width: 700px)" srcset="billeder/backgroundpicture3.svg">
+            <img src="billeder/forsidemobil.svg" alt="default">
+        </picture>
+    </div>
+
+    <div class="video">
+        <video autoplay muted loop>
+            <source src="billeder/splashvideo.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+    </div>
+
+    <div id="logo">
+        <a href="index.html"><img src="billeder/logo.svg" alt="logo"></a>
+    </div>
+    <div id="bigjewl">
+        <img src="billeder/jewlerypiece2.png" alt="bigjewl">
+    </div>
+
+
+    <div class="feedcontainer"></div>
+
+
+    <template>
+
+        <article class="feedpic">
+            <a href="#"><img src="" alt=""></a>
+        </article>
+
+    </template>
+
+
+</body>
+
+<script>
+    let feed = [];
+
+    document.addEventListener("DOMContentLoaded", start);
+
+    function start() {
+        getJson();
+
+        document.querySelector(".burgermenu").addEventListener("click", toggleMenu)
+    }
+
+    async function getJson() {
+        let url =
+            "http://phin.dk/2semeksamen/wordpress/wp-json/wp/v2/feed?per_page=100"
+        let jsonData = await fetch(url);
+        feed = await jsonData.json();
+        visFeed();
+    }
+
+    function visFeed() {
+        let temp = document.querySelector("template");
+        let dest = document.querySelector(".feedcontainer")
+
+        feed.forEach(onepost => {
+            console.log(onepost);
+
+            let klon = temp.cloneNode(true).content;
+            klon.querySelector("img").src = onepost.feedbillede.guid;
+            klon.querySelector("a").href = "eachpic.html?slug=" + onepost.slug;
+            dest.appendChild(klon);
+        });
+    }
+
+    function toggleMenu() {
+        let erSkjult =
+
+            document.querySelector(".navmenu").classList.toggle("hidden");
+        document.querySelector(".burgermenu").classList.toggle("change");
+
+
+    }
+</script>
+
+</html>
