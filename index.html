@@ -275,50 +275,51 @@
 
     </template>
 
+    <script>
+        let feed = [];
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            getJson();
+
+            document.querySelector(".burgermenu").addEventListener("click", toggleMenu)
+        }
+
+        async function getJson() {
+            let url =
+                "http://phin.dk/2semeksamen/wordpress/wp-json/wp/v2/feed?per_page=100"
+            let jsonData = await fetch(url);
+            feed = await jsonData.json();
+            visFeed();
+        }
+
+        function visFeed() {
+            let temp = document.querySelector("template");
+            let dest = document.querySelector(".feedcontainer")
+
+            feed.forEach(onepost => {
+                console.log(onepost);
+
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("img").src = onepost.feedbillede.guid;
+                klon.querySelector("a").href = "eachpic.html?slug=" + onepost.slug;
+                dest.appendChild(klon);
+            });
+        }
+
+        function toggleMenu() {
+            let erSkjult =
+
+                document.querySelector(".navmenu").classList.toggle("hidden");
+            document.querySelector(".burgermenu").classList.toggle("change");
+
+
+        }
+
+    </script>
 
 </body>
 
-<script>
-    let feed = [];
-
-    document.addEventListener("DOMContentLoaded", start);
-
-    function start() {
-        getJson();
-
-        document.querySelector(".burgermenu").addEventListener("click", toggleMenu)
-    }
-
-    async function getJson() {
-        let url =
-            "http://phin.dk/2semeksamen/wordpress/wp-json/wp/v2/feed?per_page=100"
-        let jsonData = await fetch(url);
-        feed = await jsonData.json();
-        visFeed();
-    }
-
-    function visFeed() {
-        let temp = document.querySelector("template");
-        let dest = document.querySelector(".feedcontainer")
-
-        feed.forEach(onepost => {
-            console.log(onepost);
-
-            let klon = temp.cloneNode(true).content;
-            klon.querySelector("img").src = onepost.feedbillede.guid;
-            klon.querySelector("a").href = "eachpic.html?slug=" + onepost.slug;
-            dest.appendChild(klon);
-        });
-    }
-
-    function toggleMenu() {
-        let erSkjult =
-
-            document.querySelector(".navmenu").classList.toggle("hidden");
-        document.querySelector(".burgermenu").classList.toggle("change");
-
-
-    }
-</script>
 
 </html>

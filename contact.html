@@ -592,6 +592,7 @@
         }
 
         /*MEDIA QUERIES END*/
+
     </style>
 </head>
 
@@ -660,59 +661,59 @@
         <div class="productH"></div>
         <div class="productText"></div>
     </div>
+    <script>
+        let feed = [];
 
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            async function getJson() {
+                let url =
+                    "http://phin.dk/2semeksamen/wordpress/wp-json/wp/v2/contact/93"
+                let jsonData = await fetch(url);
+                feed = await jsonData.json();
+                visFeed();
+            }
+
+            function visFeed() {
+                document.querySelector(".headline").textContent = feed.title.rendered;
+                document.querySelector(".text1").innerHTML = feed.content.rendered;
+                document.querySelector(".pic1 img").src = feed.billede1.guid;
+                document.querySelector(".PRcontactH").innerHTML = feed.headline1;
+                document.querySelector(".PRcontact .spalt").innerHTML = feed.spalt;
+                document.querySelector(".PRcontact .nat1").innerHTML = feed.nat1;
+                document.querySelector(".PRcontact .nat2").innerHTML = feed.nat2;
+                document.querySelector(".PRcontact .nat3").innerHTML = feed.nat3;
+                document.querySelector(".PRcontact .nat4").innerHTML = feed.nat4;
+                document.querySelector(".PRcontact .sar1").innerHTML = feed.sar1;
+                document.querySelector(".PRcontact .sar2").innerHTML = feed.sar2;
+                document.querySelector(".PRcontact .sar3").innerHTML = feed.sar3;
+                document.querySelector(".PRcontact .sar4").innerHTML = feed.sar4;
+                document.querySelector(".goodcareH").innerHTML = feed.headline2;
+                document.querySelector(".goodcareText1").innerHTML = feed.caretext1;
+                document.querySelector(".goodcareText2").innerHTML = feed.caretext2;
+                document.querySelector(".goodcareText2").innerHTML = feed.caretext2;
+                document.querySelector(".pic2 img").src = feed.billede2.guid;
+                document.querySelector(".productH").innerHTML = feed.headline3;
+                document.querySelector(".productText").innerHTML = feed.theproduct1;
+            }
+            getJson();
+
+            document.querySelector(".burgermenu").addEventListener("click", toggleMenu)
+        }
+
+        function toggleMenu() {
+            let erSkjult =
+
+                document.querySelector(".navmenu").classList.toggle("hidden");
+            document.querySelector(".burgermenu").classList.toggle("change");
+
+
+        }
+
+    </script>
 
 </body>
 
-<script>
-    let feed = [];
-
-    document.addEventListener("DOMContentLoaded", start);
-
-    function start() {
-        async function getJson() {
-            let url =
-                "http://phin.dk/2semeksamen/wordpress/wp-json/wp/v2/contact/93"
-            let jsonData = await fetch(url);
-            feed = await jsonData.json();
-            visFeed();
-        }
-
-        function visFeed() {
-            document.querySelector(".headline").textContent = feed.title.rendered;
-            document.querySelector(".text1").innerHTML = feed.content.rendered;
-            document.querySelector(".pic1 img").src = feed.billede1.guid;
-            document.querySelector(".PRcontactH").innerHTML = feed.headline1;
-            document.querySelector(".PRcontact .spalt").innerHTML = feed.spalt;
-            document.querySelector(".PRcontact .nat1").innerHTML = feed.nat1;
-            document.querySelector(".PRcontact .nat2").innerHTML = feed.nat2;
-            document.querySelector(".PRcontact .nat3").innerHTML = feed.nat3;
-            document.querySelector(".PRcontact .nat4").innerHTML = feed.nat4;
-            document.querySelector(".PRcontact .sar1").innerHTML = feed.sar1;
-            document.querySelector(".PRcontact .sar2").innerHTML = feed.sar2;
-            document.querySelector(".PRcontact .sar3").innerHTML = feed.sar3;
-            document.querySelector(".PRcontact .sar4").innerHTML = feed.sar4;
-            document.querySelector(".goodcareH").innerHTML = feed.headline2;
-            document.querySelector(".goodcareText1").innerHTML = feed.caretext1;
-            document.querySelector(".goodcareText2").innerHTML = feed.caretext2;
-            document.querySelector(".goodcareText2").innerHTML = feed.caretext2;
-            document.querySelector(".pic2 img").src = feed.billede2.guid;
-            document.querySelector(".productH").innerHTML = feed.headline3;
-            document.querySelector(".productText").innerHTML = feed.theproduct1;
-        }
-        getJson();
-
-        document.querySelector(".burgermenu").addEventListener("click", toggleMenu)
-    }
-
-    function toggleMenu() {
-        let erSkjult =
-
-            document.querySelector(".navmenu").classList.toggle("hidden");
-        document.querySelector(".burgermenu").classList.toggle("change");
-
-
-    }
-</script>
 
 </html>

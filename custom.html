@@ -130,7 +130,7 @@
         .picturescustom {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(21, 1fr);
+            grid-template-rows: repeat(24, 10vw);
             grid-gap: 15px;
             margin-right: 13vw;
             position: absolute;
@@ -142,6 +142,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .pic9 p {
+            font-family: 'raleway';
+            text-align: right;
         }
 
         .pic3 {
@@ -198,6 +203,14 @@
             grid-column-end: 7;
             grid-row-start: 11;
             grid-row-end: 16;
+        }
+
+        .pic9 {
+            grid-column-start: 1;
+            grid-column-end: 7;
+            grid-row-start: 22;
+            grid-row-end: 24;
+            padding: 2vw;
         }
 
 
@@ -297,7 +310,7 @@
 
             .picturescustom {
                 grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(8, 1fr);
+                grid-template-rows: repeat(9, 17vw);
                 top: 38vw;
                 margin-right: 10vw;
             }
@@ -358,6 +371,13 @@
                 grid-row-end: 8;
             }
 
+            .pic9 {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 9;
+                grid-row-end: 10;
+            }
+
 
         }
 
@@ -385,7 +405,7 @@
         @media (min-width: 900px) {
             .picturescustom {
                 grid-template-columns: repeat(14, 1fr);
-                grid-template-rows: repeat(15, 1fr);
+                grid-template-rows: repeat(21, 4vw);
                 margin-right: 15vw;
                 top: 40vw;
             }
@@ -452,8 +472,8 @@
             .pic7 {
                 grid-column-start: 5;
                 grid-column-end: 12;
-                grid-row-start: 11;
-                grid-row-end: 16;
+                grid-row-start: 16;
+                grid-row-end: 21;
             }
 
             .pic8 {
@@ -461,6 +481,13 @@
                 grid-column-end: 15;
                 grid-row-start: 8;
                 grid-row-end: 13;
+            }
+
+            .pic9 {
+                grid-column-start: 1;
+                grid-column-end: 12;
+                grid-row-start: 11;
+                grid-row-end: 15;
             }
 
         }
@@ -506,6 +533,7 @@
         }
 
         /*MEDIA QUERIES END*/
+
     </style>
 </head>
 
@@ -559,52 +587,59 @@
             <div class="pic6"><img src="" alt=""></div>
             <div class="pic7"><img src="" alt=""></div>
             <div class="pic8"><img src="" alt=""></div>
+            <div class="pic9">
+                <p></p>
+                <img src="" alt="">
+            </div>
         </div>
     </div>
 
+    <script>
+        let feed = [];
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            async function getJson() {
+                let url =
+                    "http://phin.dk/2semeksamen/wordpress/wp-json/wp/v2/custom/60"
+                let jsonData = await fetch(url);
+                feed = await jsonData.json();
+                visFeed();
+            }
+
+            function visFeed() {
+                document.querySelector(".headline").textContent = feed.title.rendered;
+                document.querySelector(".text1").innerHTML = feed.content.rendered;
+                document.querySelector(".pic1 img").src = feed.billede1.guid;
+                document.querySelector(".pic2 img").src = feed.billede2.guid;
+                document.querySelector(".pic3 img").src = feed.billede3.guid;
+                document.querySelector(".pic4 img").src = feed.billede4.guid;
+                document.querySelector(".pic5 img").src = feed.billede5.guid;
+                document.querySelector(".pic6 img").src = feed.billede6.guid;
+                document.querySelector(".pic7 img").src = feed.billede7.guid;
+                document.querySelector(".pic8 img").src = feed.billede8.guid;
+                document.querySelector(".pic9 p").innerHTML = feed.sizeguidetext;
+                document.querySelector(".pic9 img").src = feed.sizeguidepic.guid;
+            }
+            getJson();
+
+            document.querySelector(".burgermenu").addEventListener("click", toggleMenu)
+
+        }
+
+        function toggleMenu() {
+            let erSkjult =
+
+                document.querySelector(".navmenu").classList.toggle("hidden");
+            document.querySelector(".burgermenu").classList.toggle("change");
+
+
+        }
+
+    </script>
 
 </body>
 
-<script>
-    let feed = [];
-
-    document.addEventListener("DOMContentLoaded", start);
-
-    function start() {
-        async function getJson() {
-            let url =
-                "http://phin.dk/2semeksamen/wordpress/wp-json/wp/v2/custom/60"
-            let jsonData = await fetch(url);
-            feed = await jsonData.json();
-            visFeed();
-        }
-
-        function visFeed() {
-            document.querySelector(".headline").textContent = feed.title.rendered;
-            document.querySelector(".text1").innerHTML = feed.content.rendered;
-            document.querySelector(".pic1 img").src = feed.billede1.guid;
-            document.querySelector(".pic2 img").src = feed.billede2.guid;
-            document.querySelector(".pic3 img").src = feed.billede3.guid;
-            document.querySelector(".pic4 img").src = feed.billede4.guid;
-            document.querySelector(".pic5 img").src = feed.billede5.guid;
-            document.querySelector(".pic6 img").src = feed.billede6.guid;
-            document.querySelector(".pic7 img").src = feed.billede7.guid;
-            document.querySelector(".pic8 img").src = feed.billede8.guid;
-        }
-        getJson();
-
-        document.querySelector(".burgermenu").addEventListener("click", toggleMenu)
-
-    }
-
-    function toggleMenu() {
-        let erSkjult =
-
-            document.querySelector(".navmenu").classList.toggle("hidden");
-        document.querySelector(".burgermenu").classList.toggle("change");
-
-
-    }
-</script>
 
 </html>

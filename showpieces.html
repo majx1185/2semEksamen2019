@@ -309,6 +309,7 @@
         }
 
         /*MEDIA QUERIES END*/
+
     </style>
 </head>
 
@@ -363,48 +364,48 @@
             <div class="pic8"><img src="" alt=""></div>
         </div>
     </div>
+    <script>
+        let feed = [];
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            async function getJson() {
+                let url =
+                    "http://phin.dk/2semeksamen/wordpress/wp-json/wp/v2/showpiece/35"
+                let jsonData = await fetch(url);
+                feed = await jsonData.json();
+                visFeed();
+            }
+
+            function visFeed() {
+                document.querySelector(".headline").textContent = feed.title.rendered;
+                document.querySelector(".text1").innerHTML = feed.content.rendered;
+                document.querySelector(".pic1 img").src = feed.billede1.guid;
+                document.querySelector(".pic2 img").src = feed.billede2.guid;
+                document.querySelector(".pic3 img").src = feed.billede3.guid;
+                document.querySelector(".pic4 img").src = feed.billede4.guid;
+                document.querySelector(".pic5 img").src = feed.billede5.guid;
+                document.querySelector(".pic6 img").src = feed.billede6.guid;
+                document.querySelector(".pic7 img").src = feed.billede7.guid;
+                document.querySelector(".pic8 img").src = feed.billede8.guid;
+            }
+            getJson();
+
+            document.querySelector(".burgermenu").addEventListener("click", toggleMenu)
+        }
+
+        function toggleMenu() {
+            let erSkjult =
+
+                document.querySelector(".navmenu").classList.toggle("hidden");
+            document.querySelector(".burgermenu").classList.toggle("change");
+
+
+        }
+
+    </script>
 
 </body>
-
-<script>
-    let feed = [];
-
-    document.addEventListener("DOMContentLoaded", start);
-
-    function start() {
-        async function getJson() {
-            let url =
-                "http://phin.dk/2semeksamen/wordpress/wp-json/wp/v2/showpiece/35"
-            let jsonData = await fetch(url);
-            feed = await jsonData.json();
-            visFeed();
-        }
-
-        function visFeed() {
-            document.querySelector(".headline").textContent = feed.title.rendered;
-            document.querySelector(".text1").innerHTML = feed.content.rendered;
-            document.querySelector(".pic1 img").src = feed.billede1.guid;
-            document.querySelector(".pic2 img").src = feed.billede2.guid;
-            document.querySelector(".pic3 img").src = feed.billede3.guid;
-            document.querySelector(".pic4 img").src = feed.billede4.guid;
-            document.querySelector(".pic5 img").src = feed.billede5.guid;
-            document.querySelector(".pic6 img").src = feed.billede6.guid;
-            document.querySelector(".pic7 img").src = feed.billede7.guid;
-            document.querySelector(".pic8 img").src = feed.billede8.guid;
-        }
-        getJson();
-
-        document.querySelector(".burgermenu").addEventListener("click", toggleMenu)
-    }
-
-    function toggleMenu() {
-        let erSkjult =
-
-            document.querySelector(".navmenu").classList.toggle("hidden");
-        document.querySelector(".burgermenu").classList.toggle("change");
-
-
-    }
-</script>
 
 </html>
