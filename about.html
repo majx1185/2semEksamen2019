@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="På ninnayork.com kan du finde unikke og ægte smykker håndlavet af den danske smykkedesigner Ninna York. Du kan desuden få lavet et custom jewellery, bl.a. af materiale fra dine gamle smykker. Ninna Yorks værksted og showroom er lokaliseret i København. Shop dit sølv og guld i god kvalitet og ej noget der er tidsvarende i både design og holdbarhed. Create Your Attitude.">
+    <meta name="keywords" content="Smykkedesigner, Sølv, Guld, Ninna York, Dansk Designer, Dansk Smykkedesigner, Smykker, Øreringe, Ring, Halskæde, Armbånd, Smykker Til Kvinder, Smykker Online, Diamantring, Perler, Ringe Online, Forlovelsesringe, Danmark, København, Jewellery, Create Your Attitude">
+    <title>About</title>
+    <link rel="icon" href="billeder/favicon.png" type="image/png" sizes="16x16">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        /*FONTS*/
+        @font-face {
+            font-family: 'raleway';
+            src: url('fonts/raleway-webfont.woff2') format('woff2'),
+                url('fonts/raleway-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'spinnaker';
+            src: url('fonts/spinnaker-webfont.woff2') format('woff2'),
+                url('fonts/spinnaker-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /*FONTS SLUT*/
+
+        /*        BACKGROUND*/
+
+        #backgroundpic img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -999;
+        }
+
+        #logo img {
+            width: 180px;
+            position: absolute;
+            top: 20px;
+            left: 7vw;
+        }
+
+        /*        BACKGROUND END*/
+
+        /*        MENU*/
+        .mainmenu .navmenu {
+            position: fixed;
+            right: 5vw;
+            top: 12vw;
+            text-align: right;
+        }
+
+        .mainmenu .navmenu a {
+            text-decoration: none;
+            color: black;
+            line-height: 50px;
+            font-family: 'spinnaker';
+            background-color: white;
+            padding: 0.2vw 1vw;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #fixednav {
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        .burgermenu {
+            margin-right: 30px;
+            margin-top: 17px;
+            z-index: 100;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 55px;
+            height: 6px;
+            background-image: linear-gradient(-90deg, goldenrod, gold);
+            border-radius: 10vw;
+            margin: 9px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            transform: rotate(-45deg) translate(-13px, 9px);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            transform: rotate(45deg) translate(-10px, -9px);
+        }
+
+        /*        MENU END*/
+
+        /*CONTENT TEXT MOBILE FIRST*/
+        .allcontent {
+            padding-left: 10vw;
+            padding-top: 50vw;
+        }
+
+        .headline {
+            padding: 0 0 5vw 45vw;
+            font-size: 2rem;
+            font-family: 'raleway';
+        }
+
+        .maincontent {
+            display: grid;
+            grid-template-areas:
+                "text1"
+                "video"
+                "text2"
+                "pic";
+        }
+
+        .text1 {
+            grid-area: text1;
+            padding-top: 30vw;
+            width: 90%;
+            font-family: 'spinnaker';
+            line-height: 1.5;
+        }
+
+        .text1 strong{
+            font-size: 1.7rem;
+        }
+
+        .video video {
+            grid-area: video;
+            width: 90%;
+            margin-top: 2vw;
+        }
+
+        .text2 {
+            grid-area: text2;
+            padding-top: 5vw;
+            width: 90%;
+            font-family: 'spinnaker';
+            line-height: 1.5;
+            background-color: white;
+        }
+
+        .allcontent img {
+            grid-area: pic;
+            padding-top: 7vw;
+            width: 90%;
+        }
+
+        /*CONTENT TEXT MOBILE FIRST END*/
+
+
+        /*MEDIA QUERIES*/
+        /*burgermenu*/
+        @media (max-width: 770px) {
+            .hidden {
+                display: none;
+            }
+
+            .burgermenu {
+                position: absolute;
+                right: 2%;
+            }
+
+            .mainmenu .navmenu {
+                background-color: rgba(255, 255, 255, 0.9);
+                top: 10%;
+                position: absolute;
+                right: 10%;
+                font-size: 1.5rem;
+                padding-top: 10vw;
+                padding-right: 30px;
+                text-align: center;
+                border-radius: 5%;
+            }
+
+            .mainmenu .navmenu a{
+                background: none;
+                padding: 0;
+            }
+
+        }
+
+
+        /*tablet*/
+        @media (min-width: 700px) {
+            #logo img {
+                width: 20%;
+            }
+
+            .allcontent {
+                padding-left: 14vw;
+                padding-top: 0;
+            }
+
+            .maincontent {
+                padding-right: 10vw;
+            }
+
+            .headline {
+                padding: 20vw 15vw 5vw;
+            }
+
+            .text1 {
+                padding-top: 0;
+                width: 80%;
+            }
+
+            .text1 strong{
+                font-size: 1.1rem;
+            }
+
+            .text2 {
+                background-color: white;
+                padding-bottom: 2vw;
+            }
+
+            .video video, .allcontent img{
+                width: 95%;
+            }
+
+        }
+
+        @media (min-width: 771px){
+            .burgermenu {
+                display: none;
+            }
+
+            .video video, .allcontent img{
+                width: 93%;
+            }
+        }
+
+        /*desktop*/
+        @media (min-width: 900px) {
+            #logo img {
+                width: 25%;
+            }
+
+            .headline {
+                padding-left: 10vw;
+                padding-top: 13vw;
+            }
+
+            .maincontent {
+                grid-template-areas:
+                    "text1 video"
+                    "pic text2";
+                padding-right: 12vw;
+            }
+
+            .video video{
+                width: 75%;
+            }
+
+            .text2 {
+                padding-top: 20vw;
+                background: none;
+            }
+
+            .allcontent img {
+                padding-top: 20vw;
+                width: 80%;
+            }
+        }
+
+        @media (min-width: 979px){
+            .text1 strong{
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (min-width: 1100px){
+            .text1 strong{
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (min-width: 1280px){
+            .text1 strong{
+                font-size: 2rem;
+            }
+}
+        /*MEDIA QUERIES END*/
+
+    </style>
+</head>
+
+<body>
+    <div id="fixednav">
+        <header class="mainmenu">
+            <div class="burgermenu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <div class="navmenu hidden">
+                <nav>
+                    <ul>
+                        <li><a href="custom.html">Custom</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="showpieces.html">Showpieces</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div id="backgroundpic">
+        <picture>
+            <source media="(min-width: 700px)" srcset="billeder/aboutbackground.svg">
+            <img src="billeder/aboutmobil.svg" alt="default">
+        </picture>
+    </div>
+    <a href="index.html">
+        <div id="logo">
+            <picture>
+                <source media="(min-width: 700px)" srcset="billeder/logoblack.svg">
+                <img src="billeder/logo.svg" alt="logo">
+            </picture>
+        </div>
+    </a>
+
+    <div class="allcontent">
+        <div class="headline"></div>
+        <div class="maincontent">
+            <div class="text1"></div>
+            <div class="video">
+                <video controls>
+
+                    <source src="billeder/aboutvideo.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+
+                </video> </div>
+            <div class="text2"></div>
+            <img src="" alt="">
+        </div>
+    </div>
+
+</body>
+
+<script>
+    let feed = [];
+
+    document.addEventListener("DOMContentLoaded", start);
+
+    function start() {
+        async function getJson() {
+            let url =
+                "http://phin.dk/2semeksamen/wordpress/wp-json/wp/v2/about/74"
+            let jsonData = await fetch(url);
+            feed = await jsonData.json();
+            visFeed();
+        }
+
+        function visFeed() {
+            document.querySelector(".headline").textContent = feed.title.rendered;
+            document.querySelector(".text1").innerHTML = feed.content.rendered;
+            document.querySelector(".text2").innerHTML = feed.tekst;
+            document.querySelector(".allcontent img").src = feed.billede.guid;
+        }
+        getJson();
+
+        document.querySelector(".burgermenu").addEventListener("click", toggleMenu)
+    }
+
+    function toggleMenu() {
+        let erSkjult =
+
+            document.querySelector(".navmenu").classList.toggle("hidden");
+        document.querySelector(".burgermenu").classList.toggle("change");
+
+
+    }
+</script>
+
+</html>

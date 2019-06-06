@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="På ninnayork.com kan du finde unikke og ægte smykker håndlavet af den danske smykkedesigner Ninna York. Du kan desuden få lavet et custom jewellery, bl.a. af materiale fra dine gamle smykker. Ninna Yorks værksted og showroom er lokaliseret i København. Shop dit sølv og guld i god kvalitet og ej noget der er tidsvarende i både design og holdbarhed. Create Your Attitude.">
+    <meta name="keywords" content="Smykkedesigner, Sølv, Guld, Ninna York, Dansk Designer, Dansk Smykkedesigner, Smykker, Øreringe, Ring, Halskæde, Armbånd, Smykker Til Kvinder, Smykker Online, Diamantring, Perler, Ringe Online, Forlovelsesringe, Danmark, København, Jewellery, Create Your Attitude">
+    <title>Contact</title>
+    <link rel="icon" href="billeder/favicon.png" type="image/png" sizes="16x16">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        /*FONTS*/
+        @font-face {
+            font-family: 'raleway';
+            src: url('fonts/raleway-webfont.woff2') format('woff2'),
+                url('fonts/raleway-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'spinnaker';
+            src: url('fonts/spinnaker-webfont.woff2') format('woff2'),
+                url('fonts/spinnaker-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /*FONTS SLUT*/
+
+        /*        BACKGROUND*/
+
+        #backgroundpic img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -999;
+        }
+
+        #logo img {
+            width: 200px;
+            position: absolute;
+            top: 20px;
+            left: 7vw;
+        }
+
+        /*        BACKGROUND END*/
+
+        /*        MENU*/
+        .mainmenu .navmenu {
+            position: fixed;
+            right: 5vw;
+            top: 12vw;
+            text-align: right;
+        }
+
+        .mainmenu .navmenu a {
+            text-decoration: none;
+            color: black;
+            line-height: 50px;
+            font-family: 'spinnaker';
+            background-color: white;
+            padding: 0.2vw 1vw;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #fixednav {
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        .burgermenu {
+            margin-right: 30px;
+            margin-top: 17px;
+            z-index: 100;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 55px;
+            height: 6px;
+            background-image: linear-gradient(-90deg, goldenrod, gold);
+            border-radius: 10vw;
+            margin: 9px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            transform: rotate(-45deg) translate(-13px, 9px);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            transform: rotate(45deg) translate(-10px, -9px);
+        }
+
+
+        /*        MENU END*/
+
+        /*CONTENT TEXT MOBILE FIRST*/
+        .allcontent {
+            padding-left: 10vw;
+            padding-top: 50vw;
+        }
+
+        .headline {
+            padding-left: 37vw;
+            padding-top: 12vw;
+            font-size: 2rem;
+            font-family: 'raleway';
+        }
+
+        .text1 {
+            padding-top: 15vw;
+            width: 90%;
+            font-family: 'spinnaker';
+            line-height: 1.6;
+        }
+
+        .pic1 img {
+            padding-top: 23vw;
+            padding-left: 0;
+            width: 90%;
+        }
+
+        .PRcontactH {
+            color: black;
+            padding: 29vw 0 5vw;
+            font-family: 'raleway';
+            font-size: 1.3rem;
+            width: 70%;
+            line-height: 1.5;
+        }
+
+        .PRcontact {
+            color: black;
+            line-height: 1.5;
+            width: 50%;
+            font-family: 'spinnaker';
+        }
+
+        .spalt,
+        .nat2,
+        .nat4,
+        .sar2 {
+            padding-bottom: 4vw;
+        }
+
+        .goodcareH {
+            padding: 20vw 0 5vw;
+            font-family: 'raleway';
+            font-size: 1.3rem;
+            width: 70%;
+            line-height: 1.5;
+        }
+
+        .goodcareText1,
+        .goodcareText2 {
+            line-height: 1.8;
+            width: 90%;
+            font-family: 'spinnaker';
+            padding-bottom: 5vw;
+        }
+
+        .pic2 img {
+            width: 90%;
+        }
+
+        .productH {
+            padding: 5vw 0;
+            font-family: 'raleway';
+            font-size: 1.3rem;
+            width: 70%;
+            line-height: 1.5;
+            background-color: white;
+        }
+
+        .productText {
+            line-height: 1.8;
+            width: 90%;
+            font-family: 'spinnaker';
+            padding-bottom: 5vw;
+            background-color: white;
+        }
+
+        /*CONTENT TEXT MOBILE FIRST END*/
+
+
+        /*MEDIA QUERIES*/
+        /*burgermenu*/
+        @media (max-width: 770px) {
+            .hidden {
+                display: none;
+            }
+
+            .burgermenu {
+                position: absolute;
+                right: 2%;
+            }
+
+            .mainmenu .navmenu {
+                background-color: rgba(255, 255, 255, 0.9);
+                top: 10%;
+                position: absolute;
+                right: 10%;
+                font-size: 1.5rem;
+                padding-top: 10vw;
+                padding-right: 40px;
+                text-align: center;
+                border-radius: 5%;
+            }
+
+            .mainmenu .navmenu a {
+                background: none;
+                padding: 0;
+            }
+
+
+        }
+
+        /*større mobil*/
+        @media (min-width: 335px) {
+            .pic1 img {
+                padding-top: 33vw;
+            }
+
+            .PRcontactH {
+                padding-top: 34vw;
+            }
+        }
+
+        @media (min-width: 375px) {
+            .pic1 img {
+                padding-top: 40vw;
+            }
+        }
+
+        @media (min-width: 435px) {
+            .text1 {
+                padding-top: 30vw;
+            }
+        }
+
+        @media (min-width: 460px) {
+            .text1 {
+                line-height: 1.8;
+            }
+
+            .pic1 img {
+                padding-top: 2vw;
+                padding-left: 35vw;
+                width: 50%;
+            }
+
+            .PRcontactH {
+                color: white;
+                padding-top: 6vw;
+            }
+
+            .PRcontact {
+                color: white;
+            }
+
+        }
+
+        @media (min-width: 488px) {
+            .goodcareH {
+                padding-top: 30vw;
+            }
+        }
+
+        @media (min-width: 530px) {
+            .goodcareH {
+                padding-top: 50vw;
+            }
+        }
+
+        /*endnu større mobil/lille tablet*/
+        @media (min-width: 600px) {
+            .PRcontact {
+                padding-top: 10vw;
+            }
+        }
+
+        /*endnu endnu større mobil/lille tablet*/
+        @media (min-width: 666px) {
+            .text1 {
+                line-height: 2.5;
+                padding-top: 25vw;
+            }
+
+            .pic1 img {
+                margin-top: -64vw;
+                padding-left: 40vw;
+                width: 45%;
+            }
+
+            .PRcontactH {
+                padding-top: 33vw;
+            }
+
+            .PRcontact {
+                padding-top: 0;
+            }
+
+            .goodcareH {
+                padding-top: 8vw;
+                color: white;
+            }
+
+            .goodcareText1,
+            .goodcareText2 {
+                color: white;
+            }
+
+            .pic2 img {
+                padding-top: 30vw;
+            }
+
+        }
+
+        /*tablet*/
+        @media (min-width: 700px) {
+            .allcontent {
+                padding-left: 11vw;
+                padding-top: 0;
+            }
+
+            .headline {
+                padding: 15% 5vw 2vw;
+            }
+
+            .text1 {
+                padding-top: 21vw;
+                width: 90%;
+                color: white;
+                line-height: 1.8;
+            }
+
+            .pic1 img {
+                width: 30%;
+                padding-left: 53vw;
+            }
+
+            .PRcontactH {
+                color: black;
+                padding-top: 10vw;
+            }
+
+            .PRcontact {
+                color: black;
+            }
+
+            .goodcareH {
+                color: black;
+            }
+
+            .goodcareText1,
+            .goodcareText2 {
+                color: black;
+                width: 86%;
+                background-color: white;
+            }
+
+            .pic2 img {
+                padding-top: 0;
+                width: 86%;
+            }
+
+            .productText {
+                width: 86%
+            }
+
+        }
+
+        /*større tablet*/
+        @media (min-width: 760px) {
+            .text1 {
+                padding-top: 23vw;
+            }
+        }
+
+        @media (min-width: 771px) {
+            .burgermenu {
+                display: none;
+            }
+
+            .pic1 img {
+                padding-left: 43vw;
+            }
+
+            .goodcareText1,
+            .goodcareText2 {
+                width: 82%;
+            }
+
+            .pic2 img {
+                width: 82%;
+            }
+
+            .productText {
+                width: 82%
+            }
+        }
+
+        /*endnu større tablet*/
+        @media (min-width: 800px) {
+            .text1 {
+                padding-top: 25vw;
+            }
+        }
+
+        /*endnu endnu større tablet*/
+        @media (min-width: 850px) {
+            .text1 {
+                padding-top: 28vw;
+            }
+        }
+
+        /*desktop*/
+        @media (min-width: 900px) {
+            #logo img {
+                width: 260px;
+            }
+
+            .content2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                background-color: white;
+            }
+
+            .PRcontactH,
+            .PRcontact,
+            .goodcareH {
+                padding-left: 3vw;
+            }
+
+            .goodcareText1,
+            .goodcareText2 {
+                width: 80%;
+                padding-left: 3vw;
+            }
+
+            .pic2 img {
+                width: 66%;
+            }
+
+            .productH {
+                padding-top: 2vw;
+                padding-left: 3vw;
+            }
+
+            .productText {
+                column-count: 2;
+                column-gap: 5vw;
+                width: 80%;
+                padding-left: 3vw;
+            }
+
+            .text1 {
+                padding-top: 26vw;
+                line-height: 2;
+                padding-left: 3vw;
+            }
+
+            .spalt,
+            .nat2,
+            .nat4,
+            .sar2 {
+                padding-bottom: 3vw;
+            }
+
+        }
+
+        /*større desktop*/
+        @media (min-width: 960px) {
+            .text1 {
+                padding-top: 28vw;
+            }
+        }
+
+        /* endnu større desktop*/
+        @media (min-width: 1005px) {
+            .text1 {
+                padding-top: 30vw;
+            }
+        }
+
+        /* næststørste desktop*/
+        @media (min-width: 1024px) {
+            .headline {
+                padding-left: 12vw;
+            }
+
+            .text1 {
+                padding-top: 0;
+                color: black;
+                padding-left: 6vw;
+                line-height: 1.5
+            }
+
+            .pic1 img {
+                margin-top: 6vw;
+                width: 36%;
+                padding-left: 3vw;
+            }
+
+            .PRcontactH {
+                margin-top: -50vw;
+                padding-top: 0;
+                padding-bottom: 2vw;
+                padding-left: 48vw;
+                color: white;
+                width: 30%;
+            }
+
+            .PRcontact {
+                color: white;
+                padding-left: 48vw;
+                width: 25%;
+            }
+
+            .spalt,
+            .nat2,
+            .nat4,
+            .sar2 {
+                padding-bottom: 2vw;
+            }
+
+            .pic2 img {
+                padding-top: 5vw;
+            }
+
+            .goodcareH {
+                padding-top: 20vw;
+                padding-bottom: 4vw;
+            }
+
+            .content2 {
+                background: none;
+            }
+
+            .productH {
+                padding-top: 0;
+                padding-bottom: 4vw;
+            }
+
+            .productText {
+                background-color: white;
+            }
+
+        }
+
+        /*største desktop*/
+        @media (min-width: 1160px) {
+
+            .spalt,
+            .nat2,
+            .nat4,
+            .sar2 {
+                padding-bottom: 2vw;
+            }
+
+            .text1 {
+                padding-top: 2vw;
+            }
+
+            .pic1 img {
+                margin-top: 10vw;
+            }
+
+            .goodcareH {
+                padding-top: 23vw;
+            }
+        }
+
+        /*aller største desktop*/
+        @media (min-width: 1333px) {
+            .goodcareH {
+                padding-top: 26vw;
+            }
+        }
+
+        /*MEDIA QUERIES END*/
+    </style>
+</head>
+
+<body>
+    <div id="fixednav">
+        <header class="mainmenu">
+            <div class="burgermenu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <div class="navmenu hidden">
+                <nav>
+                    <ul>
+                        <li><a href="custom.html">Custom</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="showpieces.html">Showpieces</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div id="backgroundpic">
+        <picture>
+            <source media="(min-width: 700px)" srcset="billeder/contactbackground.svg">
+            <img src="billeder/contactmobil.svg" alt="default">
+        </picture>
+    </div>
+    <a href="index.html">
+        <div id="logo">
+            <picture>
+                <source media="(min-width: 700px)" srcset="billeder/logoblack.svg">
+                <img src="billeder/logo.svg" alt="logo">
+            </picture>
+        </div>
+    </a>
+
+
+    <div class="allcontent">
+        <div class="headline"></div>
+        <div class="text1"></div>
+        <div class="pic1"><img src="" alt=""></div>
+        <div class="PRcontactH"></div>
+        <div class="PRcontact">
+            <div class="spalt"></div>
+            <div class="nat1"></div>
+            <div class="nat2"></div>
+            <div class="nat3"></div>
+            <div class="nat4"></div>
+            <div class="sar1"></div>
+            <div class="sar2"></div>
+            <div class="sar3"></div>
+            <div class="sar4"></div>
+        </div>
+        <div class="goodcareH"></div>
+        <div class="content2">
+            <div class="thetextbit">
+                <div class="goodcareText1"></div>
+                <div class="goodcareText2"></div>
+            </div>
+            <div class="pic2"><img src="" alt=""></div>
+        </div>
+        <div class="productH"></div>
+        <div class="productText"></div>
+    </div>
+
+
+</body>
+
+<script>
+    let feed = [];
+
+    document.addEventListener("DOMContentLoaded", start);
+
+    function start() {
+        async function getJson() {
+            let url =
+                "http://phin.dk/2semeksamen/wordpress/wp-json/wp/v2/contact/93"
+            let jsonData = await fetch(url);
+            feed = await jsonData.json();
+            visFeed();
+        }
+
+        function visFeed() {
+            document.querySelector(".headline").textContent = feed.title.rendered;
+            document.querySelector(".text1").innerHTML = feed.content.rendered;
+            document.querySelector(".pic1 img").src = feed.billede1.guid;
+            document.querySelector(".PRcontactH").innerHTML = feed.headline1;
+            document.querySelector(".PRcontact .spalt").innerHTML = feed.spalt;
+            document.querySelector(".PRcontact .nat1").innerHTML = feed.nat1;
+            document.querySelector(".PRcontact .nat2").innerHTML = feed.nat2;
+            document.querySelector(".PRcontact .nat3").innerHTML = feed.nat3;
+            document.querySelector(".PRcontact .nat4").innerHTML = feed.nat4;
+            document.querySelector(".PRcontact .sar1").innerHTML = feed.sar1;
+            document.querySelector(".PRcontact .sar2").innerHTML = feed.sar2;
+            document.querySelector(".PRcontact .sar3").innerHTML = feed.sar3;
+            document.querySelector(".PRcontact .sar4").innerHTML = feed.sar4;
+            document.querySelector(".goodcareH").innerHTML = feed.headline2;
+            document.querySelector(".goodcareText1").innerHTML = feed.caretext1;
+            document.querySelector(".goodcareText2").innerHTML = feed.caretext2;
+            document.querySelector(".goodcareText2").innerHTML = feed.caretext2;
+            document.querySelector(".pic2 img").src = feed.billede2.guid;
+            document.querySelector(".productH").innerHTML = feed.headline3;
+            document.querySelector(".productText").innerHTML = feed.theproduct1;
+        }
+        getJson();
+
+        document.querySelector(".burgermenu").addEventListener("click", toggleMenu)
+    }
+
+    function toggleMenu() {
+        let erSkjult =
+
+            document.querySelector(".navmenu").classList.toggle("hidden");
+        document.querySelector(".burgermenu").classList.toggle("change");
+
+
+    }
+</script>
+
+</html>
